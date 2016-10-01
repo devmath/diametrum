@@ -1,0 +1,19 @@
+.footer {
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	
+	div {
+		width: 100%;
+		height: 100%;
+		background-color: darken($blue, 20%);
+		padding: 30px;
+		@include transform(skewY(-1deg) translateY(13px));
+
+		p {
+			@include transform(skewY(1deg));
+			padding: 15px 15px 20px;
+			color: #fff;
+		}
+	}
+}

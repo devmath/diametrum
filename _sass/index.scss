@@ -1,0 +1,86 @@
+.myself {
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+
+	article {
+		flex: 0 0 70%;
+		padding: 50px 10px;
+
+		h1 {color: $dark-green;}
+	}
+}
+
+.projects {
+	height: auto;
+	background: url('../img/office.jpg') left top no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	@include transform(skewY(-1deg));
+
+	.title {
+		width: 100%;
+		@include transform(skewY(1deg));
+
+		h1 {
+			padding: 35px 35px 15px;
+			color: #fff;
+		}
+	}
+
+	.content {
+		@include flex(wrap row);
+		@include flex-align(flex-start, flex-start, flex-start);
+
+		.project-item {
+			flex: 0 0 calc(100% / 4);
+			height: auto;
+			background-color: darken($green, 15%);
+			padding: 15px;
+
+			h2, p {
+				color: #fff;
+				@include transform(skewY(1deg));
+				padding-bottom: 10px;
+			}
+
+			h2 {padding-top: 15px;}
+			
+			p {padding-bottom: 15px;}
+
+			&:nth-child(2) {background-color: darken($red, 15%);}
+			
+			&:nth-child(3) {background-color: darken($blue, 15%);}
+
+			&:nth-child(4) {background-color: darken($yellow, 15%);}
+		}
+	}
+}
+
+.icons-home {
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+	padding: 50px;
+
+	article {
+		flex: 0 0 50%;
+		text-align: center;
+
+		ul li {
+			display: inline-block;
+			text-align: center;
+
+			a {
+				width: 1px;
+				height: 1px;
+				padding: 30px;
+				margin-left: 15px;
+				border-radius: 100%;
+				background-color: #000;
+				display: block;
+			}
+
+			&:first-child a {margin-left: 0;}
+		}
+	}
+}
