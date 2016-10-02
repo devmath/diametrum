@@ -13,8 +13,9 @@
 	img, ul {flex: 0 0 auto;}
 
 	img {
-		flex-basis: 30px;
+		flex-basis: auto;
 		height: 30px;
+		width: auto;
 	}
 
 	ul li {
