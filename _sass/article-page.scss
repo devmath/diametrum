@@ -1,0 +1,60 @@
+.articles {
+	@include flex(wrap row);
+	@include flex-align(space-around, flex-start, flex-start);
+	margin: 50px 0 0;
+
+	article {
+		flex: 0 0 calc(90% / 3);
+		@include flex(wrap row);
+		@include flex-align(center, flex-start, flex-start);
+		min-height: 300px;
+		margin-bottom: 50px;
+		position: relative;
+
+		div, .title {
+		}
+
+		.background {
+			position: absolute;
+			width: 100%;
+			height: 300px;
+			background: url('../img/office.jpg') center no-repeat;
+			background-size: cover;
+			top: 0;
+			z-index: 3;
+
+			&:before {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: block;
+				background-color: rgba(0,0,0,0.3);
+			}
+		}
+
+		.content, .title {
+			z-index: 5;
+			position: relative;
+		}
+
+		.title {
+			color: #fff;
+			padding: 15px 0;
+		}
+
+		.content {
+			width: 80%;
+			background-color: #fff;
+			border: 1px solid rgba($gray, 0.5);
+			padding: 10px;
+			min-height: 300px;
+
+			a {
+				color: $gray;
+
+				h1, p {color: $gray;}
+			}
+		}
+	}
+}
