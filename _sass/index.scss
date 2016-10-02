@@ -60,27 +60,23 @@
 .icons-home {
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
-	padding: 50px;
+	padding: 70px 0 50px;
 
-	article {
-		flex: 0 0 50%;
+	ul {
 		text-align: center;
+		flex: 0 0 auto;
 
-		ul li {
+		li {
 			display: inline-block;
-			text-align: center;
+			padding: 0 10px;
 
 			a {
-				width: 1px;
-				height: 1px;
-				padding: 30px;
-				margin-left: 15px;
-				border-radius: 100%;
-				background-color: #000;
-				display: block;
-			}
+				color: $gray;
 
-			&:first-child a {margin-left: 0;}
+				&:before {
+					font-size: 80px;
+				}
+			}
 		}
 	}
 }
