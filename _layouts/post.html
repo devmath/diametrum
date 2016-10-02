@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+    {% include menu.html %}
+
+    <section class="article">
+    	<article class="content">
+    		{{ content }}
+    	</article>
+    </section>
+
+	{% if page.warning %}
+		{% include warning.html %}
+	{% endif %}
+
+    {% include footer.html %}
+
+</body>
+
+</html>

@@ -3,6 +3,28 @@ layout: default
 ---
 
 <section class="articles">
+	{% for post in site.posts %}
+		<article>
+			<h1 class="title">language</h1>
+
+			<div class="content">
+				<a href="{{ post.url }}">
+					<h1>title</h1>
+					<p>content</p>
+				</a>
+
+				<span>tags:</span>
+
+				<a href="{{ post.url }}" class="tags">#php</a>
+			</div>
+
+			<div class="background"></div>
+		</article>
+	{% endfor %}
+</section>
+
+{% comment %}
+<section class="articles">
 	<article>
 		<h1 class="title">language</h1>
 
@@ -105,3 +127,4 @@ layout: default
 		<div class="background"></div>
 	</article>
 </section>
+{% endcomment %}

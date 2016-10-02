@@ -1,0 +1,9 @@
+.article {
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+	padding: 45px 0 25px;
+
+	article {
+		flex: 0 0 80%;
+	}
+}
