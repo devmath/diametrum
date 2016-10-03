@@ -1,0 +1,38 @@
+.search {
+	margin-top: calc(90vh - 35px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	padding: 0 15px 15px;
+	@include flex(wrap row);
+	@include flex-align(space-around, center, center);
+	@include transform(skewY(-1deg));
+
+	input, a {
+		//@include transform(skewY(1deg));
+		display: block;
+		flex: 0 0 auto;
+		color: #fff;
+	}
+
+	input {
+		flex-basis: 94%;
+		background-color: transparent;
+		border-bottom: 4px solid #fff;
+		font-size: 20px;
+		font-weight: 600;
+		padding: 15px;
+		outline: transparent;
+	}
+
+	a {
+		flex-basis: 6%;
+		color: #fff;
+		text-align: right;
+
+		&::before {
+			font-size: 50px;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 /*
 Flaticon icon font: Flaticon
-Creation date: 03/10/2016 01:18
+Creation date: 03/10/2016 21:43
 */
 
 @font-face {
@@ -21,15 +21,17 @@ Creation date: 03/10/2016 01:18
     }
 }
 
-.fi:before,
+
 .flaticon-email:before,
 .flaticon-facebook:before,
 .flaticon-github:before,
 .flaticon-instagram:before,
 .flaticon-menu:before,
 .flaticon-rss:before,
+.flaticon-search:before,
 .flaticon-share:before,
-.flaticon-twitter:before {
+.flaticon-twitter:before,
+.fi:before {
     display: inline-block;
     font-family: "Flaticon";
     font-style: normal;
@@ -50,8 +52,9 @@ Creation date: 03/10/2016 01:18
 .flaticon-instagram:before { content: "\f103"; }
 .flaticon-menu:before { content: "\f104"; }
 .flaticon-rss:before { content: "\f105"; }
-.flaticon-share:before { content: "\f106"; }
-.flaticon-twitter:before { content: "\f107"; }
+.flaticon-search:before { content: "\f106"; }
+.flaticon-share:before { content: "\f107"; }
+.flaticon-twitter:before { content: "\f108"; }
 
 $font-Flaticon-email: "\f100";
 $font-Flaticon-facebook: "\f101";
@@ -59,5 +62,6 @@ $font-Flaticon-github: "\f102";
 $font-Flaticon-instagram: "\f103";
 $font-Flaticon-menu: "\f104";
 $font-Flaticon-rss: "\f105";
-$font-Flaticon-share: "\f106";
-$font-Flaticon-twitter: "\f107";
+$font-Flaticon-search: "\f106";
+$font-Flaticon-share: "\f107";
+$font-Flaticon-twitter: "\f108";
