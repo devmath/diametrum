@@ -1,7 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  'Welcome to Jekyll!'
+language: 'php'
+introduction: 'Welcome to Jekyll, an awesome static generator. Did you know that you can work with SASS?'
 date:   2016-10-01 16:34:39 -0300
+tags: web things to product
 categories: jekyll update
 warning: true
 ---

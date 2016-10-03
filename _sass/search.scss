@@ -10,7 +10,6 @@
 	@include transform(skewY(-1deg));
 
 	input, a {
-		//@include transform(skewY(1deg));
 		display: block;
 		flex: 0 0 auto;
 		color: #fff;

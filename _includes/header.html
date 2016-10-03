@@ -1,7 +1,13 @@
 <header class="header">
     <article>
         <div class="header-content">
-            <span>Title here</span>
+            <span>
+            	{% if page.title %}
+					{{ page.title }}
+				{% else %}
+					{{ site.title }}
+				{% endif %}
+            </span>
         </div>
 
         <div class="bg-black"></div>
