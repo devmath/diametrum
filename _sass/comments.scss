@@ -1,0 +1,6 @@
+.comments {
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+
+	h1, div {flex: 0 0 80%;}
+}

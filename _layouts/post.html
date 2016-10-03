@@ -9,14 +9,20 @@
     {% include menu.html %}
 
     <section class="article">
-    	<article class="content">
-    		{{ content }}
+    	<article class="article-wrapper">
+    		<div class="content">
+    			{{ content }}
+    		</div>
     	</article>
+
+    	{% include share.html %}
     </section>
 
 	{% if page.warning %}
 		{% include warning.html %}
 	{% endif %}
+
+	{% include comments.html %}
 
     {% include footer.html %}
 

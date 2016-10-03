@@ -1,9 +1,60 @@
 .article {
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, flex-start);
-	padding: 45px 0 25px;
+	//padding: 0 0 25px;
 
 	article {
 		flex: 0 0 80%;
+		padding: 10px 0;
+		color: darken($gray, 7%);
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		@include transform(skewY(-1deg));
+	}
+
+	.article-wrapper {
+		background-color: #fff;
+		margin-top: -20px;
+		z-index: 10;
+	}
+
+	.content {
+		width: 100%;
+		height: 100%;
+		display: block;
+		@include transform(skewY(1deg));
+		
+		h1, p,
+		h2 {padding: 7px $padding-article 5px;}
+
+		h1, h2, h3 {
+			padding: 20px $padding-article 2px;
+			color: darken($green, 10%);
+		}
+
+		.highlight {
+			width: 100%;
+			margin: 4px 0;
+			padding: $padding-article;
+			background: $gray;
+		}
+
+		ol {padding: 4px 0 4px 35px;}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		a {
+			//text-decoration: underline;
+			border-bottom: 1px solid $green;
+			color: $green;
+			//padding-bottom: 1px;
+
+			&:hover {
+				font-weight: 600;
+				border-bottom-width: 2px;
+			}
+		}
 	}
 }
