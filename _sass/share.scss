@@ -5,7 +5,7 @@
 	background-color: $blue;
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
-	@include transform(skewY(-1deg) translateY(14px) !important);
+	@include transform(skewY(-1deg) !important);
 
 	ul {
 		@include transform(skewY(1deg));
