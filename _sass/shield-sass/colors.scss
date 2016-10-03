@@ -16,11 +16,10 @@ $node: #7FBD42;
 
 // Basic
 $gray: #333;
-$blue: #1056ad;
-$red: #E03E36;
-//$yellow2: #FFD00C;
-$yellow: #ffa500;
+$blue: darken(#1056ad, 15%);
+$red: darken(#E03E36, 15%);
+$green: darken(#57D131, 15%);
+$yellow: darken(#ffa500, 15%);
 $pink: #FC5185;
-$green: #57D131;
-$dark-green: darken(#57D131, 15%);
 $orange: #FF7C38;
+$dark-green: darken(#57D131, 15%);
