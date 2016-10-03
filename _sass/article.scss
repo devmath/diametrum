@@ -36,6 +36,12 @@
 			margin: 4px 0;
 			padding: $padding-article;
 			background: $gray;
+
+			pre code span {
+				//font-weight: bold;
+				font-size: 15px;
+				font-family: 'Monaco', 'Consolas', 'Menlo', monospace;
+			}
 		}
 
 		ol {padding: 4px 0 4px 35px;}
