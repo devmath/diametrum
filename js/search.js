@@ -1,17 +1,33 @@
-var tags = document.getElementsByTagName('li'),
-	counter = 3,
+var input = document.getElementById('search'),
+	entry = '',
+	something = '',
+	counter = 0,
 	article = '';
-	//console.log(tags[counter].getAttribute('tag') !== 'test');
 
-for (var i = 0; i >= tags.length; i++) {
-	if (tags[i].getAttribute('tag') !== 'test') {
-		counter++;
-		article[counter] = tags[i].parentNode.parentNode.parentNode;
+function showEntry() {
+	entry = input.value;
+	hideShow(entry);
+}
+
+function searchTags(value) {
+	console.log(document.getElementsByClassName(value));
+}
+
+function hideShow(value) {
+	article = document.getElementsByClassName('each-article');
+	
+	for (var i = 0; i < article.length; i++) {
+		var that = article[i],
+			content = that.querySelector('.content')
+			ul = content.querySelector('.tags'),
+			li = ul.getElementsByClassName('tag'),
+			attr = li.getAttribute('tag');
+
+		console.log(attr == 'test');
+		/*if (article[i].querySelector('.tag').getAttribute(value) == value) {
+			console.log(article[i].querySelector('.tag').getAttribute(value));
+		} else {
+			console.log('fail');
+		}*/
 	}
 }
-	console.log(article);
-	console.log(counter);
-
-/*for (var j = 0; j >= article.length; j++) {
-	article[j].style.display = 'none';
-}*/

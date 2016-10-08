@@ -70,4 +70,19 @@
 			}
 		}
 	}
+
+	.categories {
+		display: block;
+		flex: 0 0 90%;
+		text-align: center;
+		padding: 15px 0 45px;
+
+		ul {
+			li {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }
