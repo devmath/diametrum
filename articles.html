@@ -5,13 +5,7 @@ title: 'Articles'
 
 {% include search.html %}
 
-<section id="articles" class="articles">
-	<nav class="categories">
-		<ul>
-			<li><a href="">category</a></li>
-		</ul>
-	</nav>
-	
+<section id="articles" class="articles">	
 	{% for post in site.posts %}
 		<article class="each-article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
 			<h1 class="title">{{ post.language }}</h1>
@@ -39,3 +33,6 @@ title: 'Articles'
 		</article>
 	{% endfor %}
 </section>
+
+<script src="/js/search.js"></script>
+<script src="/js/articles.js"></script>
