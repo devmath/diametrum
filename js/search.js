@@ -1,7 +1,8 @@
 var input = document.getElementById('search'),
 	entry = '',
-	something = '',
+	something = false,
 	counter = 0,
+	article_counter = '',
 	article = '';
 
 function showEntry() {
@@ -18,16 +19,15 @@ function hideShow(value) {
 	
 	for (var i = 0; i < article.length; i++) {
 		var that = article[i],
-			content = that.querySelector('.content')
-			ul = content.querySelector('.tags'),
-			li = ul.getElementsByClassName('tag'),
-			attr = li.getAttribute('tag');
+			tags = that.getAttribute('tags');
 
-		console.log(attr == 'test');
-		/*if (article[i].querySelector('.tag').getAttribute(value) == value) {
-			console.log(article[i].querySelector('.tag').getAttribute(value));
+		if (tags.indexOf(value) !== -1) {
+			//console.log(that);
 		} else {
-			console.log('fail');
-		}*/
+			that.style.display = 'none';
+			console.log('worng');
+		}
 	}
+
+	return true;
 }

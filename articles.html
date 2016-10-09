@@ -13,7 +13,7 @@ title: 'Articles'
 	</nav>
 	
 	{% for post in site.posts %}
-		<article class="each-article">
+		<article class="each-article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
 			<h1 class="title">{{ post.language }}</h1>
 
 			<div class="content">
@@ -26,7 +26,7 @@ title: 'Articles'
 
 				<ul class="tags">
 					{% for tag in post.tags %}
-						<li class="tag" tag="{{ tag }}">
+						<li>
 							<a href="/tags/#{{ tag }}">
 								#{{ tag }}
 							</a>
