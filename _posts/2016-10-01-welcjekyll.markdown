@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  'Welcome'
-language: 'ruby'
-introduction: 'did you know that you can work with SASS?'
+title:  'come yll!'
+language: 'javascript'
+introduction: 'W, an . DycawowASS?'
 date:   2016-10-01 16:34:39 -0300
-tags: test tot infosec
+tags: web things to product
 categories: jekyll update
 warning: true
 ---
