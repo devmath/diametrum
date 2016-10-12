@@ -3,7 +3,7 @@ layout: default
 title: 'Articles'
 ---
 
-<section id="articles" class="articles">	
+<section class="articles">	
 	{% for post in site.posts %}
 		<article class="each-article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
 			<h1 class="title">{{ post.language }}</h1>
