@@ -3,8 +3,6 @@ layout: default
 title: 'Articles'
 ---
 
-{% include search.html %}
-
 <section id="articles" class="articles">	
 	{% for post in site.posts %}
 		<article class="each-article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
@@ -33,6 +31,3 @@ title: 'Articles'
 		</article>
 	{% endfor %}
 </section>
-
-<script src="/js/search.js"></script>
-<script src="/js/effect.js"></script>
