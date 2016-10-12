@@ -1,16 +1,16 @@
 .menu {
 	width: 100%;
 	height: auto;
-	padding: 20px;
+	padding: 10px 20px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 999;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.8);
 	@include flex(wrap row);
 	@include flex-align(space-between, center, center);
 
-	img, ul {flex: 0 0 auto;}
+	ul, a {flex: 0 0 auto;}
 
 	.logo img {
 		flex-basis: auto;
@@ -21,11 +21,17 @@
 	ul li {
 		display: inline-block;
 		padding-left: 15px;
+		margin-top: -3px;
 
 		a {
 			color: #fff;
 			font-size: $font-size-tablet;
 			text-transform: uppercase;
 		}
+	}
+	
+	.flaticon-search {
+		color: #fff;
+		font-size: 33px;
 	}
 }

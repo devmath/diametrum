@@ -5,21 +5,21 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "shield-sass/base",
-        "shield-sass/colors",
-        "shield-sass/mixins",
-        "shield-sass/reset",
-        "flaticon",
-        "monokai",
-        "header",
-        "menu",
+        "vendor/base",
+        "vendor/colors",
+        "vendor/mixins",
+        "vendor/reset",
+        "vendor/monokai",
+        "partials/flaticon",
+        "partials/header",
+        "partials/menu",
+        "partials/warning",
+        "partials/share",
+        "partials/comments",
+        "partials/search",
+        "partials/footer",
         "index",
         "article-page",
         "article",
-        "about-page",
-        "warning",
-        "share",
-        "comments",
-        "search",
-        "footer"
+        "about-page"
 ;

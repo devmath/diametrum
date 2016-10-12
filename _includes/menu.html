@@ -8,4 +8,43 @@
         <li><a href="/articles">Articles</a></li>
         <li><a href="/about">About</a></li>
     </ul>
+
+    <a href="javascript:void(0);" class="flaticon-search"></a>
 </nav>
+
+<section class="search">
+	<article>
+		<h1>Pesquisar</h1>
+
+		<span id="quit-search">Sair</span>
+
+		<input id="search" type="text" placeholder="type your search">
+
+		<ul>
+			<li><a href="">link</a></li>
+			<li><a href="">link</a></li>
+			<li><a href="">link</a></li>
+			<li><a href="">link</a></li>
+			<li><a href="">link</a></li>
+			<li><a href="">link</a></li>
+		</ul>
+	</article>
+</section>
+
+<script>
+	var launcher = document.querySelector('.flaticon-search'),
+		searchSection = document.querySelector('.search'),
+		inputSearch = document.querySelector('#search'),
+		quitSearch = document.querySelector('#quit-search'),
+		searchActive = false;
+
+	launcher.addEventListener('click', function() {
+		searchSection.style.height = '100vh';
+		searchActive = true;
+	});
+
+	quitSearch.addEventListener('click', function() {
+		searchSection.style.height = '0';
+		searchActive = false;
+	});
+</script>
