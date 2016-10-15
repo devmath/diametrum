@@ -3,5 +3,9 @@
 	@include flex-align(center, flex-start, flex-start);
 	padding-top: 30px;
 
-	h1, div {flex: 0 0 80%;}
+	h1, div {
+		flex: 0 0 80%;
+		
+		@media screen and (max-width: 960px) {flex-basis: 95%;}
+	}
 }

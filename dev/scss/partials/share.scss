@@ -18,7 +18,11 @@
 			a {
 				color: #fff;
 
-				&:before {font-size: 42px;}
+				&:before {
+					font-size: 42px;
+					
+					@media screen and (max-width: 315px) {font-size: 33px;}
+				}
 			}
 		}
 	}
