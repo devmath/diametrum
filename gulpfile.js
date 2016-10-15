@@ -5,7 +5,6 @@ var gulp 		= require('gulp'),
 	rename 		= require('gulp-rename'),
 	uglify 		= require('gulp-uglify'),
 	plumber 	= require('gulp-plumber'),
-	imagemin 	= require('gulp-imagemin'),
 	cp 			= require('child_process'),
 	browserSync = require('browser-sync');
 
@@ -17,7 +16,7 @@ var basePath = './',
 		js: dev + '/js/*.js',
 		scss: dev + '/scss/main.scss',
 		img: dev + '/img/*.{jpg,jpeg,png,gif}',
-		jekyll: ['*.html', '/**/*.html', '_posts/*.html', '_layouts/*.html', '_includes/*.html']
+		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*']
 	},
 	paths_out = {
 		js: assets + '/js',
@@ -51,7 +50,7 @@ gulp.task('compile-scss', function() {
 		.pipe(scss())
 		.pipe(cssmin())
 		.pipe(gulp.dest(paths_on.css))
-		.pipe(browserSync.reload(stream: true))
+		.pipe(browserSync.reload({stream: true}))
 		.pipe(gulp.dest(paths_out.css));
 });
 
@@ -62,7 +61,7 @@ gulp.task('js', function() {
 		.pipe(concat('main.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths_on.js))
-		.pipe(browserSync.reload(stream: true))
+		.pipe(browserSync.reload({stream: true}))
 		.pipe(gulp.dest(paths_out.js));
 });
 
@@ -84,7 +83,7 @@ gulp.task('set-server', ['build'], function() {
 });
 
 function runner() {
-	gulp.run('build', 'compile-scss', 'js', 'image', 'set-server');
+	gulp.run('compile-scss', 'js', 'set-server');
 
 	gulp.watch(paths_in.scss, ['compile-scss']);
 	gulp.watch(paths_in.js, ['js']);
