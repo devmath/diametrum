@@ -13,3 +13,11 @@ quitSearch.addEventListener('click', function() {
 	searchSection.style.height = '0';
 	searchActive = false;
 });
+
+SimpleJekyllSearch({
+	searchInput: document.getElementById('search'),
+	resultsContainer: document.getElementById('results-container'),
+	json: '/search.json',
+	searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+	noResultsText: '<span>Ops! Anything was found, try again!'
+})

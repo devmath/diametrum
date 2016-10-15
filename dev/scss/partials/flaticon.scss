@@ -31,6 +31,7 @@ Creation date: 03/10/2016 21:43
 .flaticon-search:before,
 .flaticon-share:before,
 .flaticon-twitter:before,
+.flaticon-quit:before,
 .fi:before {
     display: inline-block;
     font-family: "Flaticon";
@@ -51,17 +52,8 @@ Creation date: 03/10/2016 21:43
 .flaticon-github:before { content: "\f102"; }
 .flaticon-instagram:before { content: "\f103"; }
 .flaticon-menu:before { content: "\f104"; }
-.flaticon-rss:before { content: "\f105"; }
-.flaticon-search:before { content: "\f106"; }
-.flaticon-share:before { content: "\f107"; }
-.flaticon-twitter:before { content: "\f108"; }
-
-$font-Flaticon-email: "\f100";
-$font-Flaticon-facebook: "\f101";
-$font-Flaticon-github: "\f102";
-$font-Flaticon-instagram: "\f103";
-$font-Flaticon-menu: "\f104";
-$font-Flaticon-rss: "\f105";
-$font-Flaticon-search: "\f106";
-$font-Flaticon-share: "\f107";
-$font-Flaticon-twitter: "\f108";
+.flaticon-quit:before { content: "\f105"; }
+.flaticon-rss:before { content: "\f106"; }
+.flaticon-search:before { content: "\f107"; }
+.flaticon-share:before { content: "\f108"; }
+.flaticon-twitter:before { content: "\f109"; }
