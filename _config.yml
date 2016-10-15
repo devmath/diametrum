@@ -21,4 +21,8 @@ github_username:  jekyll
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
+
 exclude: ['package.json', 'dev', 'node_modules']
+
+sass:
+  sass_dir: dev/scss
