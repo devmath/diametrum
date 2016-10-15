@@ -7,6 +7,10 @@
 		padding: 50px 10px;
 
 		h1 {color: $dark-green;}
+
+		@media screen and (max-width: 760px) {
+			flex-basis: 95%;
+		}
 	}
 }
 
@@ -58,7 +62,6 @@
 
 			@media screen and (max-width: 900px) {
 				flex-basis: (100% / 2);
-				//h2 {padding-top: 0;}
 			}
 
 			@media screen and (max-width: 540px) {
@@ -86,8 +89,36 @@
 
 				&:before {
 					font-size: 80px;
+
+					@media screen and (max-width: 520px) {
+						font-size: 60px;
+					}
+
+					@media screen and (max-width: 360px) {
+						font-size: 50px;
+					}
+
+					@media screen and (max-width: 280px) {
+						font-size: 70px;
+					}
 				}
 			}
+
+			@media screen and (max-width: 360px) {
+				padding: 0 5px;
+			}
+
+			@media screen and (max-width: 280px) {
+				display: block;
+				padding: 15px 0;
+
+				&:first-child {padding-top: 0;}
+				&:last-child {padding-bottom: 0;}
+			}
 		}
+	}
+
+	@media screen and (max-width: 520px) {
+		padding-top: 10px;
 	}
 }
