@@ -7,7 +7,7 @@ if (width < 960) {
 
 	logo.addEventListener('click', function(e) {
 		if (logo.classList.contains('act')) {
-			menu.style.transform = 'translateY(-118px)';
+			menu.style.transform = 'translateY(-152px)';
 			logo.classList.remove('act');
 		} else {
 			menu.style.transform = 'translateY(0)';

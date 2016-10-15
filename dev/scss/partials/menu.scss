@@ -38,7 +38,8 @@
 
 	@media screen and (max-width: 960px) {
 		text-align: center;
-		@include transform(translateY(-118px));
+		@include transform(translateY(-152px));
+		background-color: darken($gray, 2%);
 
 		ul, a {flex-basis: 100%;}
 
@@ -58,7 +59,9 @@
 
 			li {
 				display: block;
-				padding: 7px 0;
+				padding: 12px 0;
+
+				a {font-size: 18px;}
 			}
 		}
 	}
