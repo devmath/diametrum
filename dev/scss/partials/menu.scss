@@ -7,6 +7,7 @@
 	left: 0;
 	z-index: 999;
 	background-color: rgba(0,0,0,0.8);
+	transition: all 0.4s ease 0.2s;
 	@include flex(wrap row);
 	@include flex-align(space-between, center, center);
 
