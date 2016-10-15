@@ -20,4 +20,4 @@ SimpleJekyllSearch({
 	json: '/search.json',
 	searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
 	noResultsText: '<span>Ops! Anything was found, try again!'
-})
+});
