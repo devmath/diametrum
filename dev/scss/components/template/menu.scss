@@ -11,15 +11,34 @@
 	@include flex(wrap row);
 	@include flex-align(space-between, center, center);
 
-	ul, a {flex: 0 0 auto;}
+	.menu__links, 
+	.menu__logo {flex: 0 0 auto;}
 
-	.logo img {
+	@media screen and (max-width: 960px) {
+		text-align: center;
+		@include transform(translateY(-152px));
+		background-color: darken($gray, 2%);
+
+		.menu__links, 
+		.menu__logo {flex-basis: 100%;}
+	}
+}
+
+.menu__logo {
+	img {
 		flex-basis: auto;
 		height: 30px;
 		width: auto;
 	}
 
-	ul li {
+	@media screen and (max-width: 960px) {
+		order: 3;
+		display: block;
+	}
+}
+
+.menu__links {
+	li {
 		display: inline-block;
 		padding-left: 15px;
 		margin-top: -3px;
@@ -30,39 +49,26 @@
 			text-transform: uppercase;
 		}
 	}
-	
-	.flaticon-search {
-		color: #fff;
-		font-size: 33px;
-	}
 
 	@media screen and (max-width: 960px) {
-		text-align: center;
-		@include transform(translateY(-152px));
-		background-color: darken($gray, 2%);
+		padding: 10px 0 20px;
+		order: 2;
 
-		ul, a {flex-basis: 100%;}
+		li {
+			display: block;
+			padding: 12px 0;
 
-		> a {
-			order: 1;
-			display: none;
-			
-			&.logo {
-				order: 3;
-				display: block;
-			}
+			a {font-size: 18px;}
 		}
+	}
+}
 
-		ul {
-			padding: 10px 0 20px;
-			order: 2;
+.menu__search {
+	color: #fff;
+	font-size: 33px;
 
-			li {
-				display: block;
-				padding: 12px 0;
-
-				a {font-size: 18px;}
-			}
-		}
+	@media screen and (max-width: 960px) {
+		order: 1;
+		display: none;
 	}
 }
