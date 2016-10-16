@@ -8,7 +8,7 @@
 
 		h1 {color: $dark-green;}
 
-		@media screen and (max-width: 760px) {
+		@media screen and (max-width: $tiny-tablet) {
 			flex-basis: 95%;
 		}
 	}

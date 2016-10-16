@@ -22,7 +22,7 @@
 			&:before {
 				font-size: 42px;
 				
-				@media screen and (max-width: 315px) {font-size: 33px;}
+				@media screen and (max-width: $iphone-five) {font-size: 33px;}
 			}
 		}
 	}

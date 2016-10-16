@@ -14,7 +14,7 @@
 	.menu__links, 
 	.menu__logo {flex: 0 0 auto;}
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: $tablet) {
 		text-align: center;
 		@include transform(translateY(-152px));
 		background-color: darken($gray, 2%);
@@ -31,7 +31,7 @@
 		width: auto;
 	}
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: $tablet) {
 		order: 3;
 		display: block;
 	}
@@ -50,7 +50,7 @@
 		}
 	}
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: $tablet) {
 		padding: 10px 0 20px;
 		order: 2;
 
@@ -67,7 +67,7 @@
 	color: #fff;
 	font-size: 33px;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: $tablet) {
 		order: 1;
 		display: none;
 	}

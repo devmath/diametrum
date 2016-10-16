@@ -24,8 +24,8 @@
 		font-weight: 600;
 		flex: 0 0 auto;
 
-		@media screen and (max-width: 560px) {font-size: 33px;}
-		@media screen and (max-width: 360px) {font-size: 27px;}
+		@media screen and (max-width: $cellphone) {font-size: 33px;}
+		@media screen and (max-width: $iphone-six) {font-size: 27px;}
 	}
 
 	&:before {

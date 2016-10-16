@@ -26,7 +26,7 @@
 					font-size: 60px;
 				}
 
-				@media screen and (max-width: 360px) {
+				@media screen and (max-width: $iphone-six: 375px) {
 					font-size: 50px;
 				}
 
@@ -36,7 +36,7 @@
 			}
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: $iphone-six: 375px) {
 			padding: 0 5px;
 		}
 
