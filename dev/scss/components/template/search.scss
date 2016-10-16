@@ -10,53 +10,53 @@
 
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, flex-start);
+}
 
-	article {
-		flex: 0 0 70%;
-		height: auto;
+.search__wrapper {
+	flex: 0 0 70%;
+	height: auto;
+	color: #fff;
+	@include flex(wrap row);
+	@include flex-align(space-around, flex-start, flex-start);
+	padding: 70px 0 30px;
+
+	h1, span,
+	ul, input {
+		flex: 0 0 100%;
+	}
+
+	h1, span {flex-basis: 50%;}
+
+	span {
+		text-align: right;
+		padding: 15px;
+		cursor: pointer;
+
+		&.quit {font-size: 18px;}
+	}
+
+	input {
+		padding: 13px;
+		margin-top: 10px;
+		background-color: transparent;
+		border-bottom: 1px solid rgba(#fff, 0.8);
 		color: #fff;
-		@include flex(wrap row);
-		@include flex-align(space-around, flex-start, flex-start);
-		padding: 70px 0 30px;
+		font-size: 19px;
+		outline: none;
+	} 
 
-		h1, span,
-		ul, input {
-			flex: 0 0 100%;
-		}
+	ul {
+		margin-top: 25px;
 
-		h1, span {flex-basis: 50%;}
-
-		span {
-			text-align: right;
-			padding: 15px;
-			cursor: pointer;
-
-			&.quit {font-size: 18px;}
-		}
-
-		input {
-			padding: 13px;
-			margin-top: 10px;
-			background-color: transparent;
+		li {
+			width: 100%;
+			display: block;
+			margin-bottom: 25px;
 			border-bottom: 1px solid rgba(#fff, 0.8);
-			color: #fff;
-			font-size: 19px;
-			outline: none;
-		} 
+			padding-bottom: 8px;
 
-		ul {
-			margin-top: 25px;
-
-			li {
-				width: 100%;
-				display: block;
-				margin-bottom: 25px;
-				border-bottom: 1px solid rgba(#fff, 0.8);
-				padding-bottom: 8px;
-
-				a {
-					color: #fff;
-				}
+			a {
+				color: #fff;
 			}
 		}
 	}
