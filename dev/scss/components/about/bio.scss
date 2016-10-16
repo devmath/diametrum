@@ -1,23 +1,23 @@
-.page {
+.about {
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, flex-start);
 	padding: 40px 0;
+}
 
-	article {
-		flex: 0 0 80%;
+.about__content {
+	flex: 0 0 80%;
 
-		h1, p {color: $gray;}
+	h1, p {color: $gray;}
 
-		h1 {padding: 15px 0;}
+	h1 {padding: 15px 0;}
 
-		p {
-			padding: 7px 0 12px;
-			
-			&:last-child {padding-bottom: 0;}
-		}
+	p {
+		padding: 7px 0 12px;
+		
+		&:last-child {padding-bottom: 0;}
+	}
 
-		@media screen and (max-width: 960px) {
-			flex-basis: 95%;
-		}
+	@media screen and (max-width: 960px) {
+		flex-basis: 95%;
 	}
 }

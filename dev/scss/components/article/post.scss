@@ -1,4 +1,4 @@
-.article {
+.post {
 	@include flex(wrap row);
 	@include flex-align(center, flex-start, flex-start);
 	//padding: 0 0 25px;
@@ -13,56 +13,58 @@
 		@media screen and (max-width: 960px) {flex-basis: 95%;}
 	}
 
-	.article-wrapper {
-		background-color: #fff;
-		margin-top: -20px;
-		z-index: 10;
+}
+
+
+.post__wrapper {
+	background-color: #fff;
+	margin-top: -20px;
+	z-index: 10;
+}
+
+.post__wrapper_content {
+	width: 100%;
+	height: 100%;
+	display: block;
+	@include transform(skewY(1deg));
+	
+	h1, p,
+	h2 {padding: 7px $padding-article 5px;}
+
+	h1, h2, h3 {
+		padding: 20px $padding-article 2px;
+		color: darken($green, 10%);
 	}
 
-	.content {
+	.highlight {
 		width: 100%;
-		height: 100%;
-		display: block;
-		@include transform(skewY(1deg));
-		
-		h1, p,
-		h2 {padding: 7px $padding-article 5px;}
+		margin: 4px 0;
+		padding: $padding-article;
+		background: $gray;
 
-		h1, h2, h3 {
-			padding: 20px $padding-article 2px;
-			color: darken($green, 10%);
+		pre code span {
+			//font-weight: bold;
+			font-size: 15px;
+			font-family: 'Monaco', 'Consolas', 'Menlo', monospace;
 		}
+	}
 
-		.highlight {
-			width: 100%;
-			margin: 4px 0;
-			padding: $padding-article;
-			background: $gray;
+	ol {padding: 4px 0 4px 35px;}
 
-			pre code span {
-				//font-weight: bold;
-				font-size: 15px;
-				font-family: 'Monaco', 'Consolas', 'Menlo', monospace;
-			}
-		}
+	img {
+		width: 100%;
+		height: auto;
+	}
 
-		ol {padding: 4px 0 4px 35px;}
+	a {
+		//text-decoration: underline;
+		border-bottom: 1px solid $green;
+		color: $green;
+		//padding-bottom: 1px;
 
-		img {
-			width: 100%;
-			height: auto;
-		}
-
-		a {
-			//text-decoration: underline;
-			border-bottom: 1px solid $green;
-			color: $green;
-			//padding-bottom: 1px;
-
-			&:hover {
-				font-weight: 600;
-				border-bottom-width: 2px;
-			}
+		&:hover {
+			font-weight: 600;
+			border-bottom-width: 2px;
 		}
 	}
 }
