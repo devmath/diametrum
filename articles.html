@@ -3,12 +3,12 @@ layout: default
 title: 'Articles'
 ---
 
-<section class="articles">	
+<section class="blog">
 	{% for post in site.posts %}
-		<article class="each-article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
-			<h1 class="title">{{ post.language }}</h1>
+		<article class="blog__article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
+			<h1 class="blog__article_title">{{ post.language }}</h1>
 
-			<div class="content">
+			<div class="blog__article_content">
 				<a href="{{ post.url }}">
 					<h1>{{ post.title }}</h1>
 					<p>{{ post.introduction }}</p>
@@ -27,7 +27,7 @@ title: 'Articles'
 				</ul>
 			</div>
 
-			<div class="background"></div>
+			<div class="blog__article_background"></div>
 		</article>
 	{% endfor %}
 </section>
