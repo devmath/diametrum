@@ -1,22 +1,18 @@
 @charset "utf-8";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "vendor/base",
-        "vendor/colors",
-        "vendor/mixins",
-        "vendor/reset",
-        "vendor/monokai",
-        "partials/flaticon",
-        "partials/header",
-        "partials/menu",
-        "partials/warning",
-        "partials/share",
-        "partials/comments",
-        "partials/search",
-        "partials/footer",
-        "index",
-        "article-page",
-        "article",
-        "about-page"
-;
+// Import partials/
+@import 'partials/_base';
+@import 'partials/_colors';
+@import 'partials/_mixins';
+@import 'partials/reset';
+
+// Import vendor/
+@import 'vendor/flaticon';
+@import 'vendor/monokai';
+
+// Import pages/
+@import 'pages/template';
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/article';

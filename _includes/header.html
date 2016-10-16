@@ -1,15 +1,15 @@
 <header class="header">
-    <article>
-        <div class="header-content">
+    <article class="header__wrapper">
+        <div class="header__wrapper_title">
             <span>
-            	{% if page.title %}
-					{{ page.title }}
-				{% else %}
-					{{ site.title }}
-				{% endif %}
+                {% if page.title %}
+                    {{ page.title }}
+                {% else %}
+                    {{ site.title }}
+                {% endif %}
             </span>
         </div>
 
-        <div class="bg-black"></div>
+        <div class="header__wrapper_bg"></div>
     </article>
 </header>

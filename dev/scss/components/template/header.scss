@@ -1,0 +1,55 @@
+.header {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	@include transform(skewY(-1deg));
+	z-index: 6;
+	margin-top: -25px;
+	color: #fff;	
+}
+
+.header__wrapper {
+	@include transform(skewY(1deg));
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 110%;
+	z-index: 4;
+	margin-top: 25px;
+	background: transparent url('/assets/img/office.jpg') left top no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.header__wrapper_title {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+	
+	span {
+		flex: 0 0 auto;
+		font-size: 70px;
+		font-weight: 600;
+		text-align: center;
+
+		@media screen and (max-width: 560px) {
+			font-size: 50px;
+		}
+	}
+}
+
+.header__wrapper_bg {
+	width: 110%;
+	height: 110%;
+	top: 0;
+	left: 0;
+	display: block;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 5;
+}
+

@@ -1,0 +1,15 @@
+.myself {
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+
+	article {
+		flex: 0 0 70%;
+		padding: 50px 10px;
+
+		h1 {color: $dark-green;}
+
+		@media screen and (max-width: 760px) {
+			flex-basis: 95%;
+		}
+	}
+}
