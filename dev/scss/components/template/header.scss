@@ -2,54 +2,45 @@
 	position: relative;
 	min-height: 100vh;
 	overflow: hidden;
-	@include transform(skewY(-1deg));
 	z-index: 6;
-	margin-top: -25px;
-	color: #fff;	
-}
-
-.header__wrapper {
-	@include transform(skewY(1deg));
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 110%;
-	height: 110%;
-	z-index: 4;
-	margin-top: 25px;
-	background: transparent url('/assets/img/office.jpg') left top no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-}
-
-.header__wrapper_title {
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
+	color: #fff;
+	//background-color: $blue;
 	@include flex(wrap row);
 	@include flex-align(center, center, center);
-	
-	span {
-		flex: 0 0 auto;
-		font-size: 70px;
-		font-weight: 600;
-		text-align: center;
 
-		@media screen and (max-width: $cellphone) {
-			font-size: 50px;
+	&__title,
+	&__background {
+		flex: 0 0 auto;
+	}
+
+	&__title {
+		flex-basis: 90%;
+		position: relative;
+		text-align: center;
+		font-size: 60px;
+		z-index: 9;
+	}
+
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		flex-basis: 100%;
+		width: 100%;
+		height: 100%;
+		z-index: 7;
+		background: url('/assets/img/office.jpg') left top no-repeat fixed;
+		background-size: cover;
+
+		&::after {
+			content: "";
+			background-color: rgba(#000, 0.2);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 8;
 		}
 	}
 }
-
-.header__wrapper_bg {
-	width: 110%;
-	height: 110%;
-	top: 0;
-	left: 0;
-	display: block;
-	background-color: rgba(0,0,0,0.4);
-	z-index: 5;
-}
-

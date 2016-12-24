@@ -1,0 +1,26 @@
+---
+layout: default
+title: 'Categories'
+image: 'categories.jpg'
+---
+
+<section class="categories">
+	{% for category in site.categories  %}
+		<article class="categories__list" id="{{ category[0] | slugify }}">
+			<h1 class="categories__list_title" title="{{ category[0] }}">{{ category[0] }}</h1>
+
+			<ul class="categories__list_content">
+		        {% assign pages_list = category[1] %}
+		        {% for post in pages_list reversed %}
+		            {% if post.title != null %}
+		            {% if group == null or group == post.group %}
+		            <li><a title="{{ post.title }}" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+		            {% endif %}
+		            {% endif %}
+		        {% endfor %}
+		        {% assign pages_list = nil %}
+		        {% assign group = nil %}
+			</ul>
+		</article>
+	{% endfor %}
+</section>

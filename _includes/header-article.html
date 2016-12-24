@@ -1,0 +1,15 @@
+<header class="header__article" title="{{ page.title }}">
+	<h4 class="header__article_date">
+		{% include article_date.html  %}
+	</h4>
+
+    <h1 class="header__article_title">
+        {{ page.title }}
+    </h1>
+
+	<h4 class="header__article_time">{{ page.intro }}</h4>
+
+    <div class="header__article_background" {% if page.image %}
+    	style="background-image: url(/assets/img/{{ page.image }});"
+    {% endif %}></div>
+</header>

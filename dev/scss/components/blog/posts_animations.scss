@@ -1,0 +1,87 @@
+// For making some magic
+.post__content {
+	&[magic="grow"]:hover {
+		.post__content_title { @include transform(scale(1.3)); }
+		
+		.post__content_tags {
+			padding: 9px 0;
+
+			li {
+				@include transform(scale(1.1));
+				margin-left: 12px;
+			}
+		}
+
+		.post__content_intro { font-size: 18px; }
+	}
+
+	&[magic="crazy"]:hover {
+		.post__content_title {
+			font-size: 35px;
+			padding-bottom: 4px;
+			@include transform(rotate(-3deg));
+		}
+		
+		.post__content_tags {
+			padding: 9px 0;
+
+			li {
+				@include transform(scale(1.2) rotate(6deg));
+
+				&:nth-child(2) { @include transform(scale(1.2) rotate(0)); }
+
+				&:last-child { @include transform(scale(1.2) rotate(-6deg)); }
+
+				margin-left: 16px;
+			}
+		}
+
+		.post__content_intro {
+			font-size: 18px;
+			padding-top: 5px;
+			@include transform(rotate(3deg));
+		}
+	}
+
+	&[magic="trade"]:hover {
+		.post__content_title { @include transform(translateY(90px)); }
+		
+		.post__content_tags {
+			padding: 9px 0;
+
+			li {
+				margin-left: 0;
+				@include transform(scale(1.2));
+				
+				&:nth-child(2) { margin: 0 17px; }
+			}
+		}
+
+		.post__content_intro {
+			font-size: 18px;
+			padding-top: 5px;
+			@include transform(translateY(-90px));
+		}
+	}
+
+	&[magic="explode"]:hover {
+		.post__content_title { @include transform(scale(3)); }
+		
+		.post__content_tags {
+			z-index: 15;
+			li {
+				margin-left: 17px;
+				@include transform(scale(2));
+			}
+		}
+
+		.post__content_intro {
+			@include transform(scale(2));
+		}
+	}
+}
+
+.post__background:hover {
+	width: 150%;
+	height: 150%;
+}

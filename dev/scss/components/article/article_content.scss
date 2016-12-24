@@ -1,0 +1,59 @@
+.article {
+	@include flex(wrap row);
+	@include flex-align(center, center, center);
+
+	article {
+		//background-color: rgba($blue, 0.04);
+		background-color: #F5F7F9;
+		flex: 0 0 80%;
+
+		h1, h2, h3, 
+		strong, a { color: $gray; }
+
+		@media screen and (max-width: 960px) {
+			flex-basis: 100%;
+		}
+	}
+}
+
+.article__content {
+	h1, h2, h3,
+	> p, blockquote,
+	ul, ol {
+		color: $gray;
+		padding: 16px;
+	}
+
+	blockquote {
+		margin: 16px;
+		font-style: italic;
+		border-top: 4px solid rgba($gray, 0.3);
+		border-bottom: 4px solid rgba($gray, 0.3);
+	}
+
+	h1, h2, h3 { 
+		padding: 45px 16px 0;
+		
+		&:first-child { padding-top: 14px; }
+	}
+
+	img, pre { 
+		width: 100%;
+		height: auto;
+	}
+
+	strong { font-weight: bold; }
+
+	a {
+		transition: all 0.2s linear 0.001s;
+		
+		&::after {
+			font-family: Flaticon;
+			content: $icon-link;
+			padding-left: 4px;
+			font-weight: normal;
+		}
+	}
+
+	ol { padding: 10px 35px 0; }
+}

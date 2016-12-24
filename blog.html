@@ -1,0 +1,73 @@
+---
+layout: default
+title: 'Blog'
+image: 'blog.jpg'
+---
+
+{% comment %}
+<section class="filters">
+	<h1>Quick Filters</h1>
+	
+	<ul class="filters__list">
+		{% for category in site.categorys %}
+			<li class="filters__list_category" category="{{ category }}">
+				<a href="javascript:void(0);" onclick="verifyFilter('{{ category }}');">
+					{{ category }}
+				</a>
+			</li>
+		{% endfor %}
+
+		<li class="filters__list_category" category="undo">
+			<a href="javascript:void(0);" onclick="verifyFilter('undo');">
+				Undo
+			</a>
+		</li>
+	</ul>
+</section>
+{% endcomment %}
+
+<section class="blog" sizer="on" kind="on">
+	<article class="post" title="hey">
+		<div class="post__content" bg-color="green" magic="crazy">
+			<a href="javascript:void(0);">
+				<h2 class="post__content_title">
+					Hey
+				</h2>
+			</a>
+		</div>
+
+		<div class="post__background"></div>
+	</article>
+
+	{% for post in site.posts reversed %}
+		{% if post.kind == 'article' %}
+			<article class="post" title="{{ post.title }}">
+				<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
+					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+						<h2 class="post__content_title">
+							{{ post.title | truncatewords: 5 }}
+						</h2>
+					</a>
+
+					<ul tags="{% for category in post.categories %}{{ category }} {% endfor %}" class="post__content_tags">
+						{% for category in post.categories %}
+							<li category="{{ category }}">
+								<a href="/categories/#{{ category }}">
+									{{ category }}
+								</a>
+							</li>						
+						{% endfor %}
+					</ul>
+
+					<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+						<p class="post__content_intro">
+							{{ post.intro | truncatewords: 10 }}
+						</p>
+					</a>
+				</div>
+
+				<div class="post__background"{% if post.image %} style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
+			</article>
+		{% endif %}
+	{% endfor %}
+</section>

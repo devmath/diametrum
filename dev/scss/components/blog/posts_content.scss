@@ -1,0 +1,24 @@
+// For making post content tags colorful
+.post__content_tags li {
+	&[category="back-end"] { background-color: lighten($red, 15%); }
+
+	&[category="front-end"] { background-color: lighten($blue, 15%); }
+
+	&[category="html"] { background-color: $html; }
+
+	&[category="css"] { background-color: $css; }
+
+	&[category="scss"] { background-color: $scss; }
+
+	&[category="js"] { background-color: $javascript; }
+
+	&[category="php"] { background-color: $php; }
+
+	&[category="mysql"] { background-color: $mysql; }
+
+	&[category="linux"] { background-color: $linux; }
+
+	&[category="dev"] { background-color: $node; }
+
+	&[category="life"] { background-color: $orange; }
+}

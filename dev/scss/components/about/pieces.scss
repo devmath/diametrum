@@ -1,0 +1,56 @@
+.about {
+	@include flex(wrap row);
+	@include flex-align(space-around, flex-start, flex-start);
+	//padding: 40px 0;
+}
+
+.about__piece {
+	flex: 0 0 50%;
+	height: 200px;
+	padding: 15px;
+	text-align: center;
+	color: #fff;
+	background: $gray center no-repeat;
+	background-size: cover;
+	//border: 1px solid rgba(#000, 0.5);
+	cursor: pointer;
+
+	&:nth-child(1),
+	&:nth-child(3),
+	&:nth-child(4),
+	&:nth-child(5),
+	&:nth-child(7),
+	&:nth-child(9),
+	&:nth-child(11),
+	&:nth-child(12),
+	&:nth-child(13),
+	&:nth-child(15),
+	&:nth-child(16),
+	&:nth-child(17) {
+		flex-basis: 25%;
+	}
+
+	&:nth-child(1) {
+		background-image: url('/assets/img/current_project.jpg');
+	}
+
+	&:nth-child(2) {
+		background-image: url('/assets/img/life_summary.jpg');
+	}
+
+	&:nth-child(3) { background-color: $gray; }
+	&:nth-child(4) { background-color: $gray; }
+	&:nth-child(6) { background-color: #3F77BD; }
+
+	&:nth-child(5) {
+		background-image: url('/assets/img/knowledge.jpg');
+	}
+
+	@media screen and (max-width: 1024px) { flex-basis: 50% !important; }
+
+	@media screen and (max-width: 660px) { flex-basis: 100% !important; }
+
+	h1 { line-height: 160px; }
+
+	a { color: #fff; }
+}

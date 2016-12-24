@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
 
 {% include head.html %}
 
@@ -14,7 +14,7 @@
 		{% include warning.html %}
 	{% endif %}
 
-    {% include footer.html %}
+	{% include footer.html %}
 </body>
 
 </html>

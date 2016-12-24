@@ -1,15 +1,15 @@
-<nav class="menu">
-    <a href="/" class="menu__logo">
+<nav class="menu" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
+    <a href="/" class="menu__logo" title="Hernandes">
         <img src="/assets/img/logo.png">
     </a>
     
     <ul class="menu__links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/articles">Articles</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a title="Home" href="/">Home</a></li>
+        <li><a title="Blog" href="/blog">Blog</a></li>
+        <li><a title="About me" href="/about">About me</a></li>
     </ul>
 
-    <a href="javascript:void(0);" class="menu__search flaticon-search"></a>
+    <a title="Search" href="javascript:void(0);" class="menu__search flaticon-search"></a>
 </nav>
 
 <section class="search">
@@ -18,7 +18,7 @@
 
 		<span class="quit flaticon-quit" id="quit-search"></span>
 
-		<input id="search" type="text" placeholder="type your search">
+		<input id="search" title="type your search" type="text" placeholder="type your search">
 
 		<ul id="results-container"></ul>
 	</article>

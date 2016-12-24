@@ -24,6 +24,7 @@ Creation date: 03/10/2016 21:43
 
 .flaticon-email:before,
 .flaticon-facebook:before,
+.flaticon-facebook-solo:before,
 .flaticon-github:before,
 .flaticon-instagram:before,
 .flaticon-menu:before,
@@ -31,7 +32,9 @@ Creation date: 03/10/2016 21:43
 .flaticon-search:before,
 .flaticon-share:before,
 .flaticon-twitter:before,
+.flaticon-twitter-solo:before,
 .flaticon-quit:before,
+.flaticon-link:before,
 .fi:before {
     display: inline-block;
     font-family: "Flaticon";
@@ -49,11 +52,28 @@ Creation date: 03/10/2016 21:43
 
 .flaticon-email:before { content: "\f100"; }
 .flaticon-facebook:before { content: "\f101"; }
-.flaticon-github:before { content: "\f102"; }
-.flaticon-instagram:before { content: "\f103"; }
-.flaticon-menu:before { content: "\f104"; }
-.flaticon-quit:before { content: "\f105"; }
-.flaticon-rss:before { content: "\f106"; }
-.flaticon-search:before { content: "\f107"; }
-.flaticon-share:before { content: "\f108"; }
-.flaticon-twitter:before { content: "\f109"; }
+.flaticon-facebook-solo:before { content: "\f102"; }
+.flaticon-github:before { content: "\f103"; }
+.flaticon-instagram:before { content: "\f104"; }
+.flaticon-link:before { content: "\f105"; }
+.flaticon-menu:before { content: "\f106"; }
+.flaticon-quit:before { content: "\f107"; }
+.flaticon-rss:before { content: "\f108"; }
+.flaticon-search:before { content: "\f109"; }
+.flaticon-share:before { content: "\f10a"; }
+.flaticon-twitter:before { content: "\f10b"; }
+.flaticon-twitter-solo:before { content: "\f10c"; }
+    
+$icon-email: "\f100";
+$icon-facebook: "\f101";
+$icon-facebook-solo: "\f102";
+$icon-github: "\f103";
+$icon-instagram: "\f104";
+$icon-link: "\f105";
+$icon-menu: "\f106";
+$icon-quit: "\f107";
+$icon-rss: "\f108";
+$icon-search: "\f109";
+$icon-share: "\f10a";
+$icon-twitter: "\f10b";
+$icon-twitter-solo: "\f10c";

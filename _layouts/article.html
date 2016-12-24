@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}{{ site.lang }}{% endif %}">
+
+{% include head.html %}
+
+<body>
+
+    {% include header-article.html %}
+    {% include menu.html %}
+
+    <section class="article">
+    	<article class="article__content" color="{{ page.color }}">
+			{{ content }}
+    	</article>
+
+        {% include share.html %}
+
+        {% include comments.html %}
+    </section>
+
+    {% include footer.html %}
+</body>
+
+</html>

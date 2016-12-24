@@ -1,0 +1,101 @@
+.article__content {
+	&[color="green"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $green;
+		}
+
+		blockquote { border-color: rgba($green, 0.3); }
+
+		h1, h2, h3 { color: darken($green, 5%); }
+
+		a:hover { color: $green; }
+	}
+
+	&[color="blue"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $blue;
+		}
+
+		blockquote { border-color: rgba($blue, 0.3); }
+
+		h1, h2, h3 { color: darken($blue, 5%); }
+
+		a:hover { color: $blue; }
+	}
+
+	&[color="yellow"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $yellow;
+		}
+
+		blockquote { border-color: rgba($yellow, 0.3); }
+
+		h1, h2, h3 { color: darken($yellow, 8%); }
+
+		a:hover { color: $yellow; }
+	}
+
+	&[color="red"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $red;
+		}
+
+		blockquote { border-color: rgba($red, 0.3); }
+
+		h1, h2, h3 { color: darken($red, 8%); }
+
+		a:hover { color: $red; }
+	}
+
+	&[color="purple"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $purple;
+		}
+
+		blockquote { border-color: rgba($purple, 0.3); }
+
+		h1, h2, h3 { color: darken($purple, 5%); }
+
+		a:hover { color: $purple; }
+	}
+
+	&[color="orange"] {
+		blockquote,
+		b, strong,
+		ul, ol, li {
+			color: $orange;
+		}
+
+		blockquote { border-color: rgba($orange, 0.3); }
+
+		h1, h2, h3 { color: darken($orange, 10%); }
+
+		a:hover { color: $orange; }
+	}
+}
+
+.article__share_list {
+	&[color="yellow"] li a { color: lighten($yellow, 10%); }
+
+	&[color="blue"] li a { color: lighten($blue, 15%); }
+
+	&[color="red"] li a { color: lighten($red, 15%); }
+
+	&[color="green"] li a { color: lighten($green, 10%); }
+
+	&[color="pink"] li a { color: darken($pink, 8%); }
+
+	&[color="purple"] li a { color: lighten($purple, 15%); }
+
+	&[color="orange"] li a { color: darken($orange, 5%); }
+}

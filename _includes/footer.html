@@ -1,6 +1,23 @@
-<footer class="footer">
-	<div class="footer__content">
-		<p>Matheus Hernandes - © 2016</p>
-	</div>
+<footer class="social_icons">
+	<h2 class="social_icons_title" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">Be in touch</h2>
+	
+	<ul class="social_icons_list" color="{% if page.color %}{{ page.color }}{% else %}{{ site.color }}{% endif %}">
+		<li>
+			<a href="https://www.github.com/{{ site.github_username }}" title="Github" class="flaticon-github" target="_blank"></a>
+		</li>
+
+		<li>
+			<a href="mailto:{{ site.email }}" class="flaticon-email" title="Email" target="_blank"></a>
+		</li>
+
+		<li>
+			<a href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook" class="flaticon-facebook" target="_blank"></a>
+		</li>
+
+		<li>
+			<a href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram" class="flaticon-instagram" target="_blank"></a>
+		</li>
+	</ul>
 </footer>
+
 <script src="/assets/js/main.js"></script>

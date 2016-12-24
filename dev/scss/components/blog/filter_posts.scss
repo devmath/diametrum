@@ -1,0 +1,76 @@
+.filters {
+	padding: 30px;
+	text-align: center;
+
+	h1 {
+		color: $gray;
+		padding-bottom: 7px;
+
+		@media screen and (max-width: 680px) {
+			padding-bottom: 25px;
+
+			&::after {
+				content: "[click here]";
+				display: block;
+				font-weight: 300;
+				text-transform: uppercase;
+				font-size: 15px;
+			}
+		}
+	}
+
+	&__list {
+		&_category {
+			display: inline-block;
+			padding: 0 7px;
+
+			a {
+				display: block;
+				color: #fff;
+				background-color: $blue;
+				padding: 3px 4px;
+				font-weight: bold;
+				font-size: 15px;
+				text-transform: uppercase;
+			}
+
+			&[category="back-end"] a { background-color: lighten($red, 15%); }
+
+			&[category="front-end"] a { background-color: lighten($blue, 15%); }
+
+			&[category="html"] a { background-color: $html; }
+
+			&[category="css"] a { background-color: $css; }
+
+			&[category="scss"] a { background-color: $scss; }
+
+			&[category="js"] a { background-color: $javascript; }
+
+			&[category="php"] a { background-color: $php; }
+
+			&[category="mysql"] a { background-color: $mysql; }
+
+			&[category="linux"] a { background-color: $linux; }
+
+			&[category="dev"] a { background-color: $node; }
+
+			&[category="life"] a { background-color: $orange; }
+
+			@media screen and (max-width: 680px) {
+				display: block;
+				padding: 0;
+
+				a {
+					padding: 10px 0 0;
+
+					&:last-child {padding-bottom: 10px;}
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: 680px) {
+		padding: 30px 0 0;
+	}
+}
+

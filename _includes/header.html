@@ -1,15 +1,9 @@
-<header class="header">
-    <article class="header__wrapper">
-        <div class="header__wrapper_title">
-            <span>
-                {% if page.title %}
-                    {{ page.title }}
-                {% else %}
-                    {{ site.title }}
-                {% endif %}
-            </span>
-        </div>
+<header class="header" title="{{ page.title }}">
+    <h1 class="header__title">
+        {{ page.title }}
+    </h1>
 
-        <div class="header__wrapper_bg"></div>
-    </article>
+    <div class="header__background" {% if page.image %}
+    	style="background-image: url(/assets/img/{{ page.image }});"
+    {% endif %}></div>
 </header>

@@ -1,2 +1,12 @@
 // Import from ../components/blog/*
-@import '../components/blog/articles';
+
+// General settings for posts
+@import '../components/blog/posts';
+// Animations for posts
+@import '../components/blog/posts_animations';
+// Coloring posts background
+@import '../components/blog/posts_background';
+// Coloring posts content
+@import '../components/blog/posts_content';
+// Posts filters
+@import '../components/blog/filter_posts';

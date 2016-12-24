@@ -1,77 +1,82 @@
 ---
 layout: default
-warning: true
 title: 'About'
+image: 'about.jpg'
 ---
 
 <section class="about">
-	<article class="about__content">
-		<h1>Title</h1>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem quis quasi consectetur facere doloribus sequi, ad corporis consequatur, impedit consequuntur, voluptatum! Laboriosam maxime deleniti laborum itaque voluptas saepe dolor pariatur unde numquam magni provident et ex, distinctio possimus minus!
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, modi quod quisquam incidunt. Mollitia voluptas minus tempore nam ex, optio fuga beatae! Placeat ut ab itaque, nam quos, repellat deleniti quae animi, doloremque id nihil aperiam quaerat laborum ducimus veritatis.
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore enim blanditiis doloremque earum! Ullam, iste rerum repudiandae mollitia earum possimus, voluptas vel, repellendus quod sunt commodi exercitationem facilis voluptatum maiores? Ipsam esse veritatis consequatur, vero aut tempora nam et.
-		</p>
+	<article class="about__piece">
+		<h1>hey</h1>
 	</article>
+
+	<article sizer="two-four" title="life summary" class="about__piece" onclick="aboutModal('life_summary');">
+		<h1>life summary</h1>
+	</article>
+
+	<article class="about__piece" title="Instagram">
+		<a href="https://www.instagram.com/{{ site.instagram_username }}">
+			<h1>instagram</h1>
+		</a>
+	</article>
+
+	<article sizer="two-four" title="Github" class="about__piece">
+		<a href="https://www.github.com/{{ site.github_username }}">
+			<h1>github</h1>
+		</a>
+	</article>
+
+	<article class="about__piece" title="knowledge" onclick="aboutModal('knowledge');">
+		<h1>knowledge</h1>
+	</article>
+
+	<article sizer="two-four" title="Twitter" class="about__piece">
+		<a href="https://www.twitter.com/{{ site.twitter_username }}">
+			<h1>twitter</h1>
+		</a>
+	</article>
+
+	{% comment %}
+	{% for project in site.posts %}
+		{% if project.kind == 'project' %}
+			<article class="about__piece" title="{{ project.title }}">
+				<a href="{{ project.link }}">
+					<h1>{{ project.title }}</h1>
+				</a>
+			</article>
+		{% endif %}
+	{% endfor %}
+	{% endcomment %}
 </section>
 
-<section class="projects">
-	<article class="projects__title">
-		<h1>Projects</h1>
+<section class="about__modal">
+	<a href="javascript:void(0);" class="about__modal_quit"></a>
+
+	<article class="about__modal_content" image="off" what="life_summary">
+		<h1>let's go.</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quae ex tempore deserunt totam beatae modi sunt fugiat, eius earum, quo, est iusto illo quas provident at odit molestiae dicta.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quae ex tempore deserunt totam beatae modi sunt fugiat, eius earum, quo, est iusto illo quas provident at odit molestiae dicta.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quae ex tempore deserunt totam beatae modi sunt fugiat, eius earum, quo, est iusto illo quas provident at odit molestiae dicta.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quae ex tempore deserunt totam beatae modi sunt fugiat, eius earum, quo, est iusto illo quas provident at odit molestiae dicta.
+		</p>
 	</article>
 
-	<article class="projects__wrapper">
-		<div class="projects__wrapper_item">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--red">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--blue">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--yellow">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-	</article>
-</section>
-
-<section class="about">
-	<article class="about__content">
-		<h1>Title</h1>
+	<article class="about__modal_content" image="off" what="knowledge">
+		<h1>Listing</h1>
 		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem quis quasi consectetur facere doloribus sequi, ad corporis consequatur, impedit consequuntur, voluptatum! Laboriosam maxime deleniti laborum itaque voluptas saepe dolor pariatur unde numquam magni provident et ex, distinctio possimus minus!
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, modi quod quisquam incidunt. Mollitia voluptas minus tempore nam ex, optio fuga beatae! Placeat ut ab itaque, nam quos, repellat deleniti quae animi, doloremque id nihil aperiam quaerat laborum ducimus veritatis.
-		</p>
-		
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore enim blanditiis doloremque earum! Ullam, iste rerum repudiandae mollitia earum possimus, voluptas vel, repellendus quod sunt commodi exercitationem facilis voluptatum maiores? Ipsam esse veritatis consequatur, vero aut tempora nam et.
-		</p>
+		<ul>
+			<li>Something cool is here</li>
+			<li>Something cool is here</li>
+			<li>Something cool is here</li>
+			<li>Something cool is here</li>
+			<li>Something cool is here</li>
+			<li>Something cool is here</li>
+		</ul>
 	</article>
 </section>

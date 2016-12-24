@@ -1,0 +1,112 @@
+.blog {
+	@include flex(wrap row);
+	@include flex-align(space-around, flex-start, flex-start);
+
+	article {
+		flex: 0 0 50%;
+
+		@media screen and (max-width: 1024px) {flex-basis: 50% !important;}
+
+		@media screen and (max-width: 680px) {
+			flex-basis: 100% !important;
+			height: 200px;
+		}
+	}
+}
+
+.post {
+	background-color: $green;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+
+	&__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		//background: url('/assets/img/office.jpg') left top no-repeat;
+		background: left top no-repeat;
+		background-size: cover;
+		z-index: 10;
+
+		@media screen and (max-width: 960px) {
+			display: none;
+		}
+	}
+	
+	&__content {
+		z-index: 12;
+		color: #fff;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		//background-color: rgba(darken($gray, 15%), 0.9);
+		//background-color: $purple;
+		//border: 1px solid darken($purple, 15%);
+		padding: 15px;
+		text-align: center;
+
+		@include flex(wrap row);
+		@include flex-align(center, center, center);
+
+		a {
+			flex: 0 0 100%;
+			text-align: center;
+			color: #fff;
+			display: block;
+		}
+
+		&_tags {
+			width: 100%;
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				margin-left: 5px;
+				padding: 3px 4px;
+				background-color: lighten($green, 7%);
+				text-transform: uppercase;
+				font-size: 14px;
+
+				@media screen and (max-width: 680px) { font-size: 17px; }
+			}
+
+			@media screen and (max-width: 680px) { padding: 10px 0; }
+		}
+	}
+
+	&:nth-child(1),
+	&:nth-child(3),
+	&:nth-child(5),
+	&:nth-child(6),
+	&:nth-child(7),
+	&:nth-child(8),
+	&:nth-child(11),
+	&:nth-child(12) {flex-basis: 25%;}
+
+	//&[kind="project"] {flex-basis: 25%;}
+	//&[kind="article"] {flex-basis: 50%;}
+
+	//&[sizer="two-four"] {flex-basis: 25%;}
+	//&[sizer="half"] {flex-basis: 50%;}
+}
+
+.post,
+.post__background,
+.post__content,
+.post__content a,
+.post__content_title,
+.post__content_tags,
+.post__content_tags > li,
+.post__content_intro,
+.filters__list,
+.about__piece {
+	transition: all 0.2s ease 0.001s;
+	-webkit-animation-duration: 0.8s;
+	animation-duration: 0.8s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}

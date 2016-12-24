@@ -1,3 +1,1 @@
-# Diametrum a cool jekyll theme
-
-we are under :construction:
+Diametrum is a cool and simple Jekyll theme, enjoy it!

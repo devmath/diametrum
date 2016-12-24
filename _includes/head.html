@@ -1,34 +1,47 @@
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="content-language" content="en">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>
-		{% if page.title %}
-			{{ page.title | escape }}
-		{% else %}
-			{{ site.title | escape }}
-		{% endif %}
-	</title>
+	<title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-	<link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/img/fav/apple-icon-57x57.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/img/fav/apple-icon-60x60.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/img/fav/apple-icon-72x72.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/img/fav/apple-icon-76x76.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="114x114" href="{{ '/assets/img/fav/apple-icon-114x114.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="120x120" href="{{ '/assets/img/fav/apple-icon-120x120.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="144x144" href="{{ '/assets/img/fav/apple-icon-144x144.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/img/fav/apple-icon-152x152.png' | prepend: site.baseurl }}">
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/fav/apple-icon-180x180.png' | prepend: site.baseurl }}">
-	<link rel="icon" type="image/png" sizes="192x192"  href="{{ '/assets/img/fav/android-icon-192x192.png' | prepend: site.baseurl }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/fav/favicon-32x32.png' | prepend: site.baseurl }}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{{ '/assets/img/fav/favicon-96x96.png' | prepend: site.baseurl }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/img/fav/favicon-16x16.png' | prepend: site.baseurl }}">
-	<link rel="manifest" href="{{ '/assets/img/fav/manifest.json' | prepend: site.baseurl }}">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="{{ '/assets/img/fav/ms-icon-144x144.png' | prepend: site.baseurl }}">
-	<meta name="theme-color" content="#ffffff">
+	<meta name=”robots” content="index, follow">
+	<meta name="description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}, {% endfor %}{% else %}{{ site.taggs }}{% endif %}">
+
+	<!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.image %}
+    <meta property="twitter:image:src" content="{{ site.url }}/assets/img/{{ page.image }}">
+    {% else %}
+    <meta property="twitter:image:src" content="{{ '/assets/img/blog.jpg' | prepend: site.url }}">
+    {% endif %}
+
+	<!-- Facebook / Open Graph -->
+    <meta property="fb:admins" content="" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    {% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/assets/img/{{ page.image }}">
+    {% else %}
+    <meta property="og:image" content="{{ '/assets/img/blog.jpg' | prepend: site.url }}">
+    {% endif %}
+    <meta property="og:description" content="{% if page.intro %}{{ page.intro | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:site_name" content="{{ site.title }}">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/assets/img/fav/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/img/fav/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/img/fav/manifest.json">
+	<link rel="mask-icon" href="/assets/img/fav/safari-pinned-tab.svg" color="#2141cb">
+	<link rel="shortcut icon" href="/assets/img/fav/favicon.ico">
+	<meta name="msapplication-config" content="/assets/img/fav/browserconfig.xml">
+	<meta name="theme-color" content="{% if page.color %}{{ page.color }}{% else %}#2141cb{% endif %}">
 
 	<link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
 </head>

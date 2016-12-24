@@ -1,0 +1,18 @@
+// For making colorful
+.post__content {
+	&[bg-color="gray"] { background-color: rgba(darken($gray, 15%), 0.9); }
+	
+	&[bg-color="blue"] { background-color: rgba(darken($blue, 15%), 0.9); }
+	
+	&[bg-color="red"] { background-color: rgba(darken($red, 15%), 0.9); }
+
+	&[bg-color="yellow"] { background-color: rgba(darken($yellow, 15%), 0.9); }
+
+	&[bg-color="orange"] { background-color: rgba(darken($orange, 15%), 0.9); }
+
+	&[bg-color="purple"] { background-color: rgba(darken($purple, 15%), 0.9); }
+
+	&[bg-color="green"] { background-color: rgba(darken($green, 15%), 0.9); }
+
+	&[bg-color="white"] { background-color: rgba(darken(white, 15%), 0.9); }
+}

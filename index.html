@@ -1,88 +1,55 @@
 ---
 layout: default
 title: 'Home'
+image: 'home.jpg'
 ---
 
 <section class="myself">
-	<article class="myself-article">
-		<h1>Me, myself and I</h1>
-		
-		<p>
-			Hey. My name is Matheus Hernandes, I'm a code writer and an eternal apprentice.
-		</p>
-	</article>
-</section>
-
-<section class="projects">
-	<article class="projects__title">
-		<h1>Projects</h1>
-	</article>
-
-	<article class="projects__wrapper">
-		<div class="projects__wrapper_item">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--red">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--blue">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-
-		<div class="projects__wrapper_item projects__wrapper_item--yellow">
-			<h2>Project Name</h2>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, et.
-			</p>
-		</div>
-	</article>
+	<p>
+		Hey.
+	</p>
 </section>
 
 <section class="blog">
-	{% for post in site.posts %}
-		<article class="blog__article" tags="{% for tag in post.tags %} {{ tag }}{% endfor %}">
-			<h1 class="blog__article_title">{{ post.language }}</h1>
+	<article class="post" title="hey">
+		<div class="post__content" bg-color="green" magic="crazy">
+			<a href="javascript:void(0);">
+				<h2 class="post__content_title">
+					Hey
+				</h2>
+			</a>
+		</div>
 
-			<div class="blog__article_content">
-				<a href="{{ post.url }}">
-					<h1>{{ post.title }}</h1>
-					<p>{{ post.introduction }}</p>
+		<div class="post__background"></div>
+	</article>
+
+	{% for post in site.posts reversed %}
+		<article class="post" title="{{ post.title }}">
+			<div class="post__content" bg-color="{{ post.bg-color }}" color="{{ post.color }}" magic="{{ post.magic }}">
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+					<h2 class="post__content_title">
+						{{ post.title | truncatewords: 5 }}
+					</h2>
 				</a>
 
-				<span>tags:</span>
-
-				<ul class="tags">
-					{% for tag in post.tags %}
-						<li>
-							<a href="/tags/#{{ tag }}">
-								#{{ tag }}
+				<ul class="post__content_tags">
+					{% for category in post.categories %}
+						<li category="{{ category }}">
+							<a href="/categories/#{{ category }}">
+								{{ category }}
 							</a>
-						</li>
+						</li>						
 					{% endfor %}
 				</ul>
+
+				<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+					<p class="post__content_intro">
+						{{ post.intro | truncatewords: 10 }}
+					</p>
+				</a>
 			</div>
 
-			<div class="blog__article_background"></div>
+			<div class="post__background"{% if post.image %}style="background-image: url('/assets/img/{{ post.image }}');"{% endif %}></div>
 		</article>
 	{% endfor %}
-</section>
-
-<section class="icons__home">
-	<ul class="icons__home_list">
-		<li><a href="#" class="flaticon-github" target="_blank"></a></li>
-		<li><a href="#" class="flaticon-email" target="_blank"></a></li>
-		<li><a href="#" class="flaticon-facebook" target="_blank"></a></li>
-		<li><a href="#" class="flaticon-instagram" target="_blank"></a></li>
-	</ul>
 </section>

@@ -1,0 +1,27 @@
+.article__profile {
+	margin: 90px 0 30px;
+	@include flex(wrap row);
+	@include flex-align(center, flex-start, flex-start);
+
+	div { flex: 0 0 auto; }
+}
+
+.article__profile_image {
+	flex-basis: 30% !important;
+
+	img {
+		width: 50%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+	}
+}
+
+.article__profile_data {
+	flex-basis: 59% !important;
+
+	h1 { padding: 10px 0 5px; }
+
+	h4 { font-weight: 300; }
+}

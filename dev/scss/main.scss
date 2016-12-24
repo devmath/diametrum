@@ -4,6 +4,7 @@
 @import 'partials/_base';
 @import 'partials/_colors';
 @import 'partials/_mixins';
+@import 'partials/animations';
 @import 'partials/reset';
 
 // Import vendor/
@@ -15,4 +16,5 @@
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/blog';
+@import 'pages/categories';
 @import 'pages/article';

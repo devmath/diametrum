@@ -5,18 +5,19 @@ var gulp 		= require('gulp'),
 	rename 		= require('gulp-rename'),
 	uglify 		= require('gulp-uglify'),
 	plumber 	= require('gulp-plumber'),
+	//imagemin 	= require('gulp-imagemin'),
 	cp 			= require('child_process'),
 	browserSync = require('browser-sync');
 
 var basePath = './',
 	baseOut = basePath + '_site/assets',
-	dev =  basePath + '/dev',
-	assets =  basePath + '/assets',
+	dev =  basePath + 'dev',
+	assets =  basePath + 'assets',
 	paths_dev = {
 		js: [dev + '/js/*.js', dev + '/js/**/*.js'],
 		main_scss: dev + '/scss/main.scss',
 		scss: [dev + '/scss/*', dev + '/scss/**/*', dev + '/scss/**/**/*', dev + '/scss/**/**/**/*'],
-		img: dev + '/img/*.{jpg,jpeg,png,gif}',
+		img: [dev + '/img/*.{jpg,png,gif}', dev + '/img/**/*.{jpg,png,gif,svg,json,xml}'],
 		jekyll: ['*.html', '_posts/*', '_layouts/*', '_includes/*', 'search.json', '_config.yml']
 	},
 	paths_assets = {
@@ -32,7 +33,7 @@ var basePath = './',
 
 // Build Jekyll
 gulp.task('build', function(done) {
-	return cp.spawn('jekyll', ['b'], {stdio: 'inherit'})
+	return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
 		.on('error', function(err) {
 			console.log(err);
 		})
@@ -70,7 +71,9 @@ gulp.task('js', function() {
 gulp.task('image', function() {
 	gulp.src(paths_dev.img)
 		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		//.pipe(imagemin())
+		//.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		.pipe(gulp.dest(paths_site.img))
 		.pipe(gulp.dest(paths_assets.img));
 });
 
@@ -84,10 +87,11 @@ gulp.task('set-server', ['build'], function() {
 });
 
 function runner() {
-	gulp.run('compile-scss', 'js', 'set-server');
+	gulp.run('compile-scss', 'js', 'image', 'set-server');
 
 	gulp.watch(paths_dev.scss, ['compile-scss']);
 	gulp.watch(paths_dev.js, ['js']);
+	gulp.watch(paths_dev.img, ['image']);
 	gulp.watch(paths_dev.jekyll, ['rebuild']);
 }
 
