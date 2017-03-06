@@ -11,7 +11,7 @@ email: your@email.com
 description: > # this means to ignore newlines until "baseurl:"
   Your description here.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://your.url.here" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 facebook_username: facebook_user
 instagram_username: instagram_user
 twitter_username: twitter_user

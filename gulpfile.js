@@ -94,4 +94,4 @@ function runner() {
 }
 
 // Watch files for changes
-gulp.task('default', 'compile-scss', 'js', 'image', 'set-server', runner);
+gulp.task('default', ['compile-scss', 'js', 'image', 'set-server'], runner);
